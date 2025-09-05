@@ -1,0 +1,13 @@
+.to-do--list-item {
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+}
+
+.to-do--list-item-text {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+}

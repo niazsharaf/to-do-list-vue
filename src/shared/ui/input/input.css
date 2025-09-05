@@ -1,0 +1,74 @@
+.wrap {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
+
+.full {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.input {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid #d5d5d5;
+    background: var(rgba(35, 35, 35, 0.01));
+    height: 2rem;
+    font-size: 1.5rem;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    transition: border-color 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.input:focus {
+    border-color: #d5d5d5;
+}
+
+.text {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    border-radius: 0;
+    padding: 8px 10px;
+    box-shadow: none;
+}
+
+.input.text:focus {
+    border-bottom-color: #d5d5d5;
+    box-shadow: none;
+}
+
+.label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: transform 140ms ease, top 140ms ease, font-size 140ms ease, color 140ms ease;
+    background: transparent;
+    padding: 0 2px;
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+    top: 4px;
+    transform: translateY(-12px);
+    background: white;
+    font-size: 13px;
+    color: rgba(87, 87, 87, 0.91);
+}
+
+.input:placeholder-shown:not(:focus) + .label {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: rgba(87, 87, 87, 0.91);
+}
+
+.label:empty {
+    display: none;
+}
