@@ -65,7 +65,7 @@
 .input:placeholder-shown:not(:focus) + .label {
     top: 50%;
     transform: translateY(-50%);
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(87, 87, 87, 0.91);
 }
 
